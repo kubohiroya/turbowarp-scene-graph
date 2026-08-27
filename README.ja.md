@@ -11,6 +11,7 @@
 - scene graph node id と既定値を正規化する。
 - node、class、data、attribute の対応範囲を検証する。
 - deterministic な `turbowarp-aframe` call plan を作る。
+- typed value を A-Frame 文字列へ変換する。array と `{x,y,z,w}` vector は空白区切り、その他のscalar objectはkey順の `key: value` 形式になる。
 
 ## 例
 
@@ -25,7 +26,7 @@ const calls = createAFrameSceneGraphPlan({
         type: 'box',
         id: 'card',
         class: 'selected',
-        attributes: {position: '0 1 -3'}
+        attributes: {position: {x: 0, y: 1, z: -3}}
       }
     ]
   }

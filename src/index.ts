@@ -1,4 +1,8 @@
 export type SceneGraphScalar = string | number | boolean | null;
+export type SceneGraphValue =
+  | SceneGraphScalar
+  | readonly SceneGraphScalar[]
+  | Readonly<Record<string, SceneGraphScalar>>;
 
 export interface SceneGraphOptions {
   layer: string;
@@ -10,8 +14,8 @@ export interface SceneGraphNode {
   id?: string;
   class?: string | readonly string[];
   classes?: readonly string[];
-  data?: Record<string, SceneGraphScalar>;
-  attributes?: Record<string, SceneGraphScalar>;
+  data?: Record<string, SceneGraphValue>;
+  attributes?: Record<string, SceneGraphValue>;
   children?: readonly SceneGraphNode[];
 }
 
@@ -153,10 +157,10 @@ function appendNodeCalls(calls: AFrameSceneGraphCall[], node: SceneGraphNode, pa
     calls.push({extension: 'turbowarp-aframe', opcode: 'addClass', args: {CLASS: className, SELECTOR: selector}});
   }
   for (const [key, value] of Object.entries(node.data ?? {})) {
-    calls.push({extension: 'turbowarp-aframe', opcode: 'setData', args: {SELECTOR: selector, KEY: key, VALUE: String(value)}});
+    calls.push({extension: 'turbowarp-aframe', opcode: 'setData', args: {SELECTOR: selector, KEY: key, VALUE: stringifySceneGraphValue(value)}});
   }
   for (const [name, value] of Object.entries(node.attributes ?? {})) {
-    calls.push({extension: 'turbowarp-aframe', opcode: 'setAttribute', args: {SELECTOR: selector, NAME: name, VALUE: String(value)}});
+    calls.push({extension: 'turbowarp-aframe', opcode: 'setAttribute', args: {SELECTOR: selector, NAME: name, VALUE: stringifySceneGraphValue(value)}});
   }
   for (const child of node.children ?? []) appendNodeCalls(calls, child, id);
 }
@@ -226,15 +230,61 @@ function validateRecord(value: unknown, path: string): void {
   for (const [key, child] of Object.entries(value)) {
     if (key.trim().length === 0) throw new TypeError(`Scene graph ${path} keys must be non-empty strings.`);
     if (child === undefined) throw new TypeError(`Scene graph ${path}.${key} must not be undefined.`);
-    if (
-      typeof child !== 'string' &&
-      typeof child !== 'number' &&
-      typeof child !== 'boolean' &&
-      child !== null
-    ) {
-      throw new TypeError(`Scene graph ${path}.${key} must be a scalar value.`);
-    }
+    validateSceneGraphValue(child, `${path}.${key}`);
   }
+}
+
+function validateSceneGraphValue(value: unknown, path: string): asserts value is SceneGraphValue {
+  if (
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    typeof value === 'boolean' ||
+    value === null
+  ) {
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((child, index) => validateSceneGraphScalar(child, `${path}[${index}]`));
+    return;
+  }
+  if (typeof value === 'object' && value !== null) {
+    for (const [key, child] of Object.entries(value)) {
+      if (key.trim().length === 0) throw new TypeError(`Scene graph ${path} object keys must be non-empty strings.`);
+      validateSceneGraphScalar(child, `${path}.${key}`);
+    }
+    return;
+  }
+  throw new TypeError(`Scene graph ${path} must be a scalar, scalar array, or scalar object.`);
+}
+
+function validateSceneGraphScalar(value: unknown, path: string): asserts value is SceneGraphScalar {
+  if (
+    typeof value !== 'string' &&
+    typeof value !== 'number' &&
+    typeof value !== 'boolean' &&
+    value !== null
+  ) {
+    throw new TypeError(`Scene graph ${path} must be a scalar value.`);
+  }
+}
+
+export function stringifySceneGraphValue(value: SceneGraphValue): string {
+  if (Array.isArray(value)) return value.map(stringifySceneGraphScalar).join(' ');
+  if (typeof value !== 'object' || value === null) return stringifySceneGraphScalar(value);
+  const objectValue = value as Readonly<Record<string, SceneGraphScalar>>;
+  const keys = Object.keys(objectValue);
+  if (keys.length > 0 && keys.every((key) => ['x', 'y', 'z', 'w'].includes(key))) {
+    const orderedVectorKeys = ['x', 'y', 'z', 'w'].filter((key) => Object.hasOwn(objectValue, key));
+    return orderedVectorKeys.map((key) => stringifySceneGraphScalar(objectValue[key] ?? null)).join(' ');
+  }
+  return keys
+    .sort()
+    .map((key) => `${key}: ${stringifySceneGraphScalar(objectValue[key] ?? null)}`)
+    .join('; ');
+}
+
+function stringifySceneGraphScalar(value: SceneGraphScalar): string {
+  return value === null ? '' : String(value);
 }
 
 function normalizeId(value: string): string {

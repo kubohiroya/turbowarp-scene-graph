@@ -11,6 +11,7 @@ The package is app-neutral. It does not run A-Frame, own AR camera state, or par
 - Normalize scene graph node ids and defaults.
 - Validate supported node, class, data, and attribute shapes.
 - Create deterministic `turbowarp-aframe` call plans.
+- Convert typed values to A-Frame strings: arrays and `{x,y,z,w}` vectors become space-separated values; other scalar objects become sorted `key: value` pairs.
 
 ## Example
 
@@ -25,7 +26,7 @@ const calls = createAFrameSceneGraphPlan({
         type: 'box',
         id: 'card',
         class: 'selected',
-        attributes: {position: '0 1 -3'}
+        attributes: {position: {x: 0, y: 1, z: -3}}
       }
     ]
   }

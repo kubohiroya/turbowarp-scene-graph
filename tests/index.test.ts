@@ -1,5 +1,9 @@
 import {describe, expect, it} from 'vitest';
-import {createAFrameSceneGraphPlan, normalizeSceneGraphDocument} from '../src/index.js';
+import {
+  createAFrameSceneGraphPlan,
+  normalizeSceneGraphDocument,
+  stringifySceneGraphValue
+} from '../src/index.js';
 
 describe('normalizeSceneGraphDocument', () => {
   it('fills defaults and deterministic ids', () => {
@@ -76,14 +80,33 @@ describe('createAFrameSceneGraphPlan', () => {
     ]);
   });
 
-  it('rejects non-scalar data and attribute values', () => {
+  it('stringifies typed object values with an explicit A-Frame contract', () => {
+    expect(stringifySceneGraphValue({x: 0, y: 1, z: -3})).toBe('0 1 -3');
+    expect(stringifySceneGraphValue(['0', 1, -3])).toBe('0 1 -3');
+    expect(stringifySceneGraphValue({dur: 500, property: 'rotation'})).toBe(
+      'dur: 500; property: rotation'
+    );
+    const calls = createAFrameSceneGraphPlan({
+      formatVersion: 1,
+      root: {
+        children: [{id: 'card', attributes: {position: {x: 0, y: 1, z: -3}}}]
+      }
+    });
+    expect(calls).toContainEqual({
+      extension: 'turbowarp-aframe',
+      opcode: 'setAttribute',
+      args: {SELECTOR: '#card', NAME: 'position', VALUE: '0 1 -3'}
+    });
+  });
+
+  it('rejects nested object values', () => {
     expect(() =>
       createAFrameSceneGraphPlan({
         formatVersion: 1,
         root: {
-          children: [{id: 'card', attributes: {position: {x: 0} as never}}]
+          children: [{id: 'card', attributes: {position: {x: {value: 0}} as never}}]
         }
       })
-    ).toThrow('Scene graph root.children[0].attributes.position must be a scalar value.');
+    ).toThrow('Scene graph root.children[0].attributes.position.x must be a scalar value.');
   });
 });
