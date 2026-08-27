@@ -26,8 +26,7 @@ describe('normalizeSceneGraphDocument', () => {
 
 describe('createAFrameSceneGraphPlan', () => {
   it('creates deterministic low-level TurboWarp calls', () => {
-    expect(
-      createAFrameSceneGraphPlan({
+    const calls = createAFrameSceneGraphPlan({
         formatVersion: 1,
         root: {
           children: [
@@ -40,8 +39,10 @@ describe('createAFrameSceneGraphPlan', () => {
             }
           ]
         }
-      })
-    ).toEqual([
+      });
+    expect(Object.isFrozen(calls)).toBe(true);
+    expect(Object.isFrozen(calls[0]?.args)).toBe(true);
+    expect(calls).toEqual([
       {
         extension: 'turbowarp-aframe',
         opcode: 'createScene',
@@ -73,5 +74,16 @@ describe('createAFrameSceneGraphPlan', () => {
         args: {SELECTOR: '#card', NAME: 'position', VALUE: '0 1 -3'}
       }
     ]);
+  });
+
+  it('rejects non-scalar data and attribute values', () => {
+    expect(() =>
+      createAFrameSceneGraphPlan({
+        formatVersion: 1,
+        root: {
+          children: [{id: 'card', attributes: {position: {x: 0} as never}}]
+        }
+      })
+    ).toThrow('Scene graph root.children[0].attributes.position must be a scalar value.');
   });
 });

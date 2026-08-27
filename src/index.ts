@@ -1,3 +1,5 @@
+export type SceneGraphScalar = string | number | boolean | null;
+
 export interface SceneGraphOptions {
   layer: string;
   mode: string;
@@ -8,8 +10,8 @@ export interface SceneGraphNode {
   id?: string;
   class?: string | readonly string[];
   classes?: readonly string[];
-  data?: Record<string, unknown>;
-  attributes?: Record<string, unknown>;
+  data?: Record<string, SceneGraphScalar>;
+  attributes?: Record<string, SceneGraphScalar>;
   children?: readonly SceneGraphNode[];
 }
 
@@ -122,7 +124,7 @@ export function createAFrameSceneGraphPlan(document: SceneGraphDocument): AFrame
     }
   ];
   for (const child of normalized.root.children ?? []) appendNodeCalls(calls, child, rootId);
-  return calls;
+  return deepFreeze(calls);
 }
 
 function validateSceneGraphOptions(value: unknown): void {
@@ -224,6 +226,14 @@ function validateRecord(value: unknown, path: string): void {
   for (const [key, child] of Object.entries(value)) {
     if (key.trim().length === 0) throw new TypeError(`Scene graph ${path} keys must be non-empty strings.`);
     if (child === undefined) throw new TypeError(`Scene graph ${path}.${key} must not be undefined.`);
+    if (
+      typeof child !== 'string' &&
+      typeof child !== 'number' &&
+      typeof child !== 'boolean' &&
+      child !== null
+    ) {
+      throw new TypeError(`Scene graph ${path}.${key} must be a scalar value.`);
+    }
   }
 }
 
