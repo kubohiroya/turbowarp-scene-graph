@@ -1,8 +1,8 @@
-# turbowarp-scene-graph-plan
+# turbowarp-scene-graph
 
 [English](README.md)
 
-`@kubohiroya/turbowarp-scene-graph-plan` は、小さな scene graph document を正規化し、deterministic な TurboWarp extension call plan へ変換します。
+`@kubohiroya/turbowarp-scene-graph` は、小さな scene graph document を正規化し、deterministic な TurboWarp extension call plan へ変換します。
 
 このパッケージはアプリ非依存です。A-Frame の実行、AR camera state、Kamishibai story のparseは所有しません。アプリ側が document source を渡し、生成された call をdispatchします。
 
@@ -16,7 +16,7 @@
 ## 例
 
 ```ts
-import {createAFrameSceneGraphPlan} from '@kubohiroya/turbowarp-scene-graph-plan';
+import {createAFrameSceneGraphPlan} from '@kubohiroya/turbowarp-scene-graph';
 
 const calls = createAFrameSceneGraphPlan({
   formatVersion: 1,

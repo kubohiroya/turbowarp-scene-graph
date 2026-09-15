@@ -1,8 +1,8 @@
-# turbowarp-scene-graph-plan
+# turbowarp-scene-graph
 
 [日本語](README.ja.md)
 
-`@kubohiroya/turbowarp-scene-graph-plan` normalizes small scene graph documents and turns them into deterministic TurboWarp extension call plans.
+`@kubohiroya/turbowarp-scene-graph` normalizes small scene graph documents and turns them into deterministic TurboWarp extension call plans.
 
 The package is app-neutral. It does not run A-Frame, own AR camera state, or parse a Kamishibai story. App packages provide the document source and dispatch the resulting calls.
 
@@ -16,7 +16,7 @@ The package is app-neutral. It does not run A-Frame, own AR camera state, or par
 ## Example
 
 ```ts
-import {createAFrameSceneGraphPlan} from '@kubohiroya/turbowarp-scene-graph-plan';
+import {createAFrameSceneGraphPlan} from '@kubohiroya/turbowarp-scene-graph';
 
 const calls = createAFrameSceneGraphPlan({
   formatVersion: 1,
