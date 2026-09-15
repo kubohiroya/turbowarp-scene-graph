@@ -1,18 +1,18 @@
 {
-  "name": "@kubohiroya/turbowarp-scene-graph-plan",
+  "name": "@kubohiroya/turbowarp-scene-graph",
   "version": "0.1.0",
   "description": "App-neutral scene graph planning primitives for TurboWarp 3D extensions.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
   "type": "module",
   "sideEffects": false,
-  "homepage": "https://github.com/kubohiroya/turbowarp-scene-graph-plan#readme",
+  "homepage": "https://github.com/kubohiroya/turbowarp-scene-graph#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubohiroya/turbowarp-scene-graph-plan.git"
+    "url": "git+https://github.com/kubohiroya/turbowarp-scene-graph.git"
   },
   "bugs": {
-    "url": "https://github.com/kubohiroya/turbowarp-scene-graph-plan/issues"
+    "url": "https://github.com/kubohiroya/turbowarp-scene-graph/issues"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
