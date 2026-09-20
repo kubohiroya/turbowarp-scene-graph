@@ -1,7 +1,7 @@
 {
   "name": "@kubohiroya/turbowarp-scene-graph",
-  "version": "0.1.0",
-  "description": "App-neutral scene graph planning primitives for TurboWarp 3D extensions.",
+  "version": "0.2.0",
+  "description": "Scene graph planning primitives for TurboWarp 3D extensions: YAML documents, validation, normalization, and deterministic call plans.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
   "type": "module",
@@ -25,6 +25,7 @@
   },
   "files": [
     "dist/",
+    "schemas/",
     "src/",
     "README.md",
     "README.ja.md",
@@ -48,6 +49,8 @@
     "check": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run pack:check"
   },
   "devDependencies": {
+    "@types/node": "^26.6.2",
+    "ajv": "^8.20.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.10"
   },
@@ -55,6 +58,12 @@
     "turbowarp",
     "scene-graph",
     "aframe",
-    "3d"
-  ]
+    "ar",
+    "3d",
+    "yaml"
+  ],
+  "dependencies": {
+    "@kubohiroya/turbowarp-ar": "^0.3.0",
+    "yaml": "^2.9.0"
+  }
 }
