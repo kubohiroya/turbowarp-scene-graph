@@ -44,6 +44,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "build": "tsc --project tsconfig.build.json",
+    "prepublishOnly": "pnpm run build",
     "pack:check": "pnpm pack --dry-run",
     "release:check": "npm publish --dry-run --access public",
     "check": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run pack:check"
