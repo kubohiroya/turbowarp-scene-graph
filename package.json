@@ -53,7 +53,8 @@
     "release:check": "npm publish --dry-run --access public",
     "check": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run pack:check",
     "build:editor": "tsc -p tsconfig.editor.json",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
