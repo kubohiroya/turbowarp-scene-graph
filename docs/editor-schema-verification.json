@@ -1,0 +1,46 @@
+{
+  "stage": "S1-4/p",
+  "repository": "turbowarp-scene-graph",
+  "issue": "https://github.com/kubohiroya/turbowarp-scene-graph/issues/5",
+  "base": "f65ec8b8632d2852a974f3c48379f9294c49de34",
+  "branch": "feat/schema/stage1-scene-graph",
+  "targeted_tests_passed": 56,
+  "typecheck": "passed",
+  "existing_build_and_editor_emit": "passed",
+  "source_absent_isolated_import": "passed",
+  "isolated_no_DOM_skipLibCheck_false": "passed",
+  "resolved_dependencies": {
+    "@kubohiroya/turbowarp-extension-data-editor": {
+      "version": "0.1.0",
+      "resolved_path": "/private/tmp/schema-stage1-worktrees-20261018/scene-graph/node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@https+++codeload.github.com+kubohiroya+turb_5f902832b16dc00a1fc95546529ab82c/node_modules/@kubohiroya/turbowarp-extension-data-editor",
+      "manifest_sha256": "3e86db1bf667088a7a87ada19fc11573082918335dd281073464ca4fcebf74da",
+      "specifier": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#a1ab4f4f5b384eef08ef26e544186ee9d8ad4543"
+    },
+    "@kubohiroya/turbowarp-ar": {
+      "version": "0.3.0",
+      "resolved_path": "/private/tmp/schema-stage1-worktrees-20261018/scene-graph/node_modules/.pnpm/@kubohiroya+turbowarp-ar@0.3.0/node_modules/@kubohiroya/turbowarp-ar",
+      "manifest_sha256": "318d4db614f802f299edf9bcbaebef3f6f07ad1631f311ad5ed5d9bfa86a7b47",
+      "specifier": "0.3.0",
+      "plan_js_sha256": "254d0269ca025561699f9073d35a26d118d599f947cc3a03253c78a797442383",
+      "plan_dts_sha256": "c9d8e9624c3c04f8012e590299fd9caaa91a310266f26da4fd3e7ce3c697a881"
+    }
+  },
+  "emitted_sha256": {
+    "lib-editor/schemas/editor-compatible-kamishibai-3d-scene-extension.schema.json": "53bee236b3475b16d5ce5b6a7f44aaa302135aee139a9c508e4b3543c98d515d",
+    "lib-editor/schemas/editor-compatible-scene-document.schema.json": "c5ef315e4e58e2e248296dd653f9036e9c6bf9f25379b4304ef73f44f4e1d5eb",
+    "lib-editor/schemas/editor-compatible-scene-node.schema.json": "345d3faf5249b3f19409e771bcc873f369821ce54e5fcffe637b368d4b65a29f",
+    "lib-editor/src/editor-schema.d.ts": "1864411426e48d1e26df9e0d2d7d18af0d93a8c048357ffb92dc9ba809b94eb3",
+    "lib-editor/src/editor-schema.js": "42eb3296562e1e7f150c96f9ff04a2e4074e5cf1554e5f09fc9655de4212091e",
+    "lib-editor/src/kamishibai-extension.d.ts": "9c6862d3af2800d74416d8e1dacb668b60e395a0daebb3b69cb0fb44e041b058",
+    "lib-editor/src/kamishibai-extension.js": "e3b40ece7232ab8be762018ed933d87e4f4f9f12d9d6ac9c847e0e61b7d532bf",
+    "lib-editor/src/scene-graph.d.ts": "dc77663df429f9687ee1fa26f19cd7dea405956ce1a5fd6fcfc648712a713138",
+    "lib-editor/src/scene-graph.js": "224179a5fe143cee8f1ed60862022af03236254e63ebc30a3d0249b8f0611d2b"
+  },
+  "scope": {
+    "new_extension_editor_registration": false,
+    "schema_authoring_UI": false,
+    "arbitrary_schema_UI": false,
+    "GUI_dependency_change": false,
+    "cause_investigation": false
+  }
+}

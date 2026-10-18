@@ -1,2 +1,5 @@
 minimumReleaseAgeExclude:
   - '@kubohiroya/turbowarp-ar@0.3.0'
+
+allowBuilds:
+  '@kubohiroya/turbowarp-extension-data-editor@https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/a1ab4f4f5b384eef08ef26e544186ee9d8ad4543': true

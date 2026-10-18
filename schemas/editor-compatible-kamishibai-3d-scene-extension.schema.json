@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/kubohiroya/turbowarp-scene-graph/main/schemas/editor-compatible-kamishibai-3d-scene-extension.schema.json",
+  "title": "Kamishibai 3D Scene Extension (existing parser compatibility)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scene3d": {
+      "$ref": "editor-compatible-scene-document.schema.json"
+    },
+    "ar": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cameraId": {
+          "type": "string"
+        },
+        "layer": {
+          "description": "The stacking vocabulary turbowarp-ar and turbowarp-aframe share.",
+          "enum": [
+            "above-stage",
+            "below-stage"
+          ]
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "targetId",
+              "selector"
+            ],
+            "properties": {
+              "targetId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "selector": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "description": "Both halves are optional. An empty fragment is valid and expands to no calls."
+}
