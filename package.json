@@ -21,7 +21,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./editor-schema": {
+      "types": "./lib-editor/src/editor-schema.d.ts",
+      "import": "./lib-editor/src/editor-schema.js"
+    }
   },
   "files": [
     "dist/",
@@ -30,7 +34,8 @@
     "README.md",
     "README.ja.md",
     "CHANGELOG.md",
-    "LICENSE"
+    "LICENSE",
+    "lib-editor/"
   ],
   "publishConfig": {
     "access": "public",
@@ -43,11 +48,13 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "build": "tsc --project tsconfig.build.json",
-    "prepublishOnly": "pnpm run build",
+    "build": "tsc --project tsconfig.build.json && npm run build:editor",
     "pack:check": "pnpm pack --dry-run",
     "release:check": "npm publish --dry-run --access public",
-    "check": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run pack:check"
+    "check": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run pack:check",
+    "build:editor": "tsc -p tsconfig.editor.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
@@ -64,7 +71,8 @@
     "yaml"
   ],
   "dependencies": {
-    "@kubohiroya/turbowarp-ar": "^0.3.0",
-    "yaml": "^2.9.0"
+    "@kubohiroya/turbowarp-ar": "0.3.0",
+    "yaml": "^2.9.0",
+    "@kubohiroya/turbowarp-extension-data-editor": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8"
   }
 }

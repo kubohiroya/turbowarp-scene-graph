@@ -1,0 +1,110 @@
+{
+  "stage": "S1 reviewed fixes and Git artifact alignment",
+  "repository": "@kubohiroya/turbowarp-scene-graph",
+  "issue": "https://github.com/kubohiroya/turbowarp-scene-graph/issues/5",
+  "observed_at_utc": "2026-10-18T06:31:21.032885+00:00",
+  "base_commit_before_this_publication": "8e4bc40a0d357556204e05bfa33352b481f16087",
+  "branch": "feat/schema/stage1-scene-graph",
+  "dependency_pins": {
+    "@kubohiroya/turbowarp-extension-data-editor": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8"
+  },
+  "common_revision": "b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8",
+  "resolved_dependencies": [
+    {
+      "name": "@kubohiroya/turbowarp-extension-data-editor",
+      "via": "@kubohiroya/turbowarp-scene-graph",
+      "specifier": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8",
+      "resolved_path": "/private/tmp/schema-stage1-worktrees-20261018/scene-graph/node_modules/.pnpm/@kubohiroya+turbowarp-extension-data-editor@https+++codeload.github.com+kubohiroya+turb_ea9ed4fbe83b895db0a5315e4e7cce4f/node_modules/@kubohiroya/turbowarp-extension-data-editor",
+      "version": "0.1.0",
+      "manifest_sha256": "3e86db1bf667088a7a87ada19fc11573082918335dd281073464ca4fcebf74da",
+      "build_info": {
+        "name": "@kubohiroya/turbowarp-extension-data-editor",
+        "version": "0.1.0",
+        "repository": "https://github.com/kubohiroya/turbowarp-extension-data-editor",
+        "revision": "b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8"
+      },
+      "rjsf_type_sha256": "6b68cfc2a04c7b730234968bdd6fac380747e2de6631e1752caf07fd8b9b0c90",
+      "rjsf_default_null": true,
+      "pure_files_sha256": {
+        "schema-compose.d.ts": "e9bb269fcb3be82661b692e7fdf5c55ac433a31d699ac591a86bf5358046b83e",
+        "schema-compose.js": "04b32c71920f1ad99425582c3ef57b69b3725f87191efc808ef94e28b8d7bdd2",
+        "schema-engine.d.ts": "36049b8206969175b2e9628b3cf0cb670cb6b10836e28963e5aa32c797882681",
+        "schema-engine.js": "80f203c8c8035ea3e0becd02087dfe3cd5a77ffbcf1a183cbd7976e79294efff",
+        "schema-json.d.ts": "dc0a7644776117235b33129292ec0936bce37f769adb497387a7071508ce4540",
+        "schema-json.js": "367f4deb589286fad3d2c05456cfd8b6859d5e1e2efa22dcd84e629f6d9efddc",
+        "schema-types.d.ts": "4c56872a799cb4e5e59c5ebcd3b889493e082e08c5ad6629b6b1a1c5ae24a3b0",
+        "schema-types.js": "7d29a0d2cb0e10d9c98b299939c91c64fd791f09e1284b5022d8782fa54dad9a",
+        "schema-view.d.ts": "77c66c91b30d4ce06a33f1b8fac153202f64ad68936dda467eae251117132702",
+        "schema-view.js": "7efbcdd76d653b7fb8ce6dcbbe303cc282f6d640793918501717e5dc04bf0a32",
+        "schema.d.ts": "2ad7f9350c391c59d6c641c18120c84926210d7905d0d27e51e58097ced5f7be",
+        "schema.js": "c0acab4248f09489a99ae7f931302a4cf83ad0221027e06a9c6d5b32d6d094b2"
+      }
+    },
+    {
+      "name": "@kubohiroya/turbowarp-ar",
+      "via": "@kubohiroya/turbowarp-scene-graph",
+      "specifier": "0.3.0",
+      "resolved_path": "/private/tmp/schema-stage1-worktrees-20261018/scene-graph/node_modules/.pnpm/@kubohiroya+turbowarp-ar@0.3.0/node_modules/@kubohiroya/turbowarp-ar",
+      "version": "0.3.0",
+      "manifest_sha256": "318d4db614f802f299edf9bcbaebef3f6f07ad1631f311ad5ed5d9bfa86a7b47",
+      "plan_js_sha256": "254d0269ca025561699f9073d35a26d118d599f947cc3a03253c78a797442383",
+      "plan_dts_sha256": "c9d8e9624c3c04f8012e590299fd9caaa91a310266f26da4fd3e7ce3c697a881"
+    }
+  ],
+  "configuration_sha256": {
+    "package.json": "d554b87bad40754dfd5305d8fa0ea1d8afee0de98fe4a2ad4aa3dc5f7b3a0420",
+    "pnpm-lock.yaml": "39e008c7ce9bb86b0ea3195bb04ea9d08aa4128fd940fca36cc6780fd9016743",
+    "pnpm-workspace.yaml": "c04cd35f40662a3350b6e107051708f01653b8996e93108aadaad2cd9dbaa8a9",
+    "tsconfig.editor.json": "719e677d23a27032768057d11778f881e9adf7a911cbcbe3ed4f86704600bbad"
+  },
+  "source_sha256": {
+    "src/editor-schema.ts": "df64039946ab6962fc9b8507c74484f41789af4f5d36c66d50358a5a5e2bd251",
+    "src/index.ts": "100640a6090dbb9d0a18c56bd61e26a5fefa790f6a027b191000a500180037f0",
+    "src/kamishibai-extension.ts": "767eec54a880bf03d7b465cbc7ea4babdfafde083084790508756df0c004fd33",
+    "src/scene-graph.ts": "16002648d81227c053f23b24e9eb13b2d296de865b0544cf5e7680c13929acc3",
+    "src/scene-yaml.ts": "036f76f6344782d04daa96aca8c14c49dc5a18e82c27c297da21919eb8d3d6f3"
+  },
+  "emitted_sha256": {
+    "lib-editor/schemas/editor-compatible-kamishibai-3d-scene-extension.schema.json": "53bee236b3475b16d5ce5b6a7f44aaa302135aee139a9c508e4b3543c98d515d",
+    "lib-editor/schemas/editor-compatible-scene-document.schema.json": "c5ef315e4e58e2e248296dd653f9036e9c6bf9f25379b4304ef73f44f4e1d5eb",
+    "lib-editor/schemas/editor-compatible-scene-node.schema.json": "345d3faf5249b3f19409e771bcc873f369821ce54e5fcffe637b368d4b65a29f",
+    "lib-editor/src/editor-schema.d.ts": "1864411426e48d1e26df9e0d2d7d18af0d93a8c048357ffb92dc9ba809b94eb3",
+    "lib-editor/src/editor-schema.js": "42eb3296562e1e7f150c96f9ff04a2e4074e5cf1554e5f09fc9655de4212091e",
+    "lib-editor/src/kamishibai-extension.d.ts": "9c6862d3af2800d74416d8e1dacb668b60e395a0daebb3b69cb0fb44e041b058",
+    "lib-editor/src/kamishibai-extension.js": "e3b40ece7232ab8be762018ed933d87e4f4f9f12d9d6ac9c847e0e61b7d532bf",
+    "lib-editor/src/scene-graph.d.ts": "dc77663df429f9687ee1fa26f19cd7dea405956ce1a5fd6fcfc648712a713138",
+    "lib-editor/src/scene-graph.js": "224179a5fe143cee8f1ed60862022af03236254e63ebc30a3d0249b8f0611d2b"
+  },
+  "verification": {
+    "frozen_install": "passed with exact allowBuilds Git URLs",
+    "frozen_log_sha256": "419074a6a544bb68539b45353ce2b25d03b5b1156db9ca7daea37eba81d341d0",
+    "typecheck": "passed",
+    "targeted_runtime_tests": 10,
+    "runtime_log_sha256": "ad8c2a04b69ba2dca87c0c1c76bab0f17472523fe88214edc0ca6295e342aea6",
+    "resolved_R4_type_consumer": "passed; skipLibCheck:true for legacy RJSF dependency declaration limitation",
+    "R4_fixture_sha256": "15383c3b7b7b51c45a6bd7812bcb1a000e808b7bff1c7587d675b80bdaa6927b",
+    "R4_type_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure_no_DOM_consumer": "passed; skipLibCheck:false",
+    "source_emitted_hash_matches": 9,
+    "isolated_consumer": "/tmp/schema-owner-consumer-vSHrRS",
+    "global_accesses": 0,
+    "React_present": false
+  },
+  "validation_frameworks": {
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  },
+  "reviewed_source_unchanged": true,
+  "rollback_dependency_pins": {
+    "@kubohiroya/turbowarp-extension-data-editor": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#a1ab4f4f5b384eef08ef26e544186ee9d8ad4543"
+  },
+  "scope": {
+    "new_editor_registrations": false,
+    "stage2_or_later": false,
+    "GUI_dependency_updated": false,
+    "PR_merge_npm_publish": false
+  },
+  "stage2_start_condition": "Select corrected artifacts in GUI and align manifest/lock/resolution before binding/forms; GUI still public 0.1.0.",
+  "record_kind": "historical snapshot before CI corrections and producer re-pinning",
+  "current_record": "editor-schema-ci-fix-20261018.json"
+}
