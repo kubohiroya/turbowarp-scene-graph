@@ -1,5 +1,7 @@
 # 段階1: scene固定契約
 
+> 現在のGit依存固定・実解決・検証結果は[editor-schema-publication.ja.md](editor-schema-publication.ja.md)と同名JSONを参照。以下は依存更新前の採取履歴として保持する。
+
 追跡: https://github.com/kubohiroya/turbowarp-scene-graph/issues/5 。共通親はextension-data-editor #18。
 
 `./editor-schema`のsceneSchemaBundles.bare/wrapperは同じscene-document契約のvariantで、3つの同梱resourceを持つ。validateSceneDocumentInput / validateSceneExtensionInputは既存の純粋validatorとnormalizeを使い、正規化後ID重複等の入力条件を検査する。元の値を正規化結果へ置き換えず、dispatchしない。

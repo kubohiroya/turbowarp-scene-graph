@@ -12,8 +12,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#a1ab4f4f5b384eef08ef26e544186ee9d8ad4543
-        version: https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/a1ab4f4f5b384eef08ef26e544186ee9d8ad4543(react@18.3.1)
+        specifier: git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8
+        version: https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8(react@18.3.1)
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
@@ -40,8 +40,8 @@ packages:
     resolution: {integrity: sha512-Yo1ZYS50NdqW1GYod8oXJAUilBCnp3LX65visgu0rkieese0RXhAaDsNflfsEZe3b9P4PujNXWB5E45toupoyQ==}
     engines: {node: '>=22.18.0'}
 
-  '@kubohiroya/turbowarp-extension-data-editor@https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/a1ab4f4f5b384eef08ef26e544186ee9d8ad4543':
-    resolution: {gitHosted: true, integrity: sha512-0rForwgJWbQYUHNQqP0blVGRb72wtBkPRu7fsd4yk/TwJPxNXduRyVZbvayQLbvPParQ8Wv0CJDOPed5GxIQcQ==, tarball: https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/a1ab4f4f5b384eef08ef26e544186ee9d8ad4543}
+  '@kubohiroya/turbowarp-extension-data-editor@https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8}
     version: 0.1.0
     engines: {node: '>=22'}
     peerDependencies:
@@ -596,7 +596,7 @@ snapshots:
 
   '@kubohiroya/turbowarp-ar@0.3.0': {}
 
-  '@kubohiroya/turbowarp-extension-data-editor@https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/a1ab4f4f5b384eef08ef26e544186ee9d8ad4543(react@18.3.1)':
+  '@kubohiroya/turbowarp-extension-data-editor@https://codeload.github.com/kubohiroya/turbowarp-extension-data-editor/tar.gz/b5f4b8d2e391a0d57d091c8f3e1c2d58da152dc8(react@18.3.1)':
     dependencies:
       '@rjsf/core': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))(react@18.3.1)
       '@rjsf/utils': 5.24.13(react@18.3.1)
