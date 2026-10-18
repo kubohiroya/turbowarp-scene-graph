@@ -11,3 +11,7 @@ ARはこのpackageが実際に解決する0.3.0の./planを固定し、別checko
 確認: 型検査、既存Schema契約/planと新adapterの56テスト、従来dist＋独立JS/型/resource build、srcなし・DOM/Reactなし隔離importとskipLibCheck:falseのconsumer型検査が成功。元の公開Schemaは変更していない。
 
 段階2でconsumerがraw source/variantを保持してフォームへ接続する。段階1では拡張editor登録や候補UIを追加しない。新入口の利用を外す/本Issueのcommitをrevertしてrollbackでき、既存sourceの移行は不要。
+
+## S1-5の最終確認
+
+対象は合計56ケース（増分検証を含む）。srcを除いた実packageでReact不在・DOM/VM/通信globalアクセス0、skipLibCheck:falseの型検査を確認し、独立生成9ファイルを再emitと全SHA-256照合した。16契約の横断fixtureと依存artifact照合の記録は共通repoのschema-stage1-*.jsonを参照。既存生成基準は保持する。
