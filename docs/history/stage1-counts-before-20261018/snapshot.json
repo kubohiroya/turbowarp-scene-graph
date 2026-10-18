@@ -1,0 +1,8 @@
+{
+  "record_kind": "uncorrected historical snapshot; full-check66 was incorrectly recorded as10",
+  "source_commit": "7235a23718aeea94c952c49de7928af943321f6b",
+  "sha256": {
+    "editor-schema-ci-fix-20261018.json": "89c8aceda0d34e78d8d2350ca6e8b4314ee7434cc9012cd64d8c064bc9440564",
+    "editor-schema-ci-fix-20261018.ja.md": "6aa88b4f5258a616bb4f2004775e1a99e77a1ef33c6a56cba745d58090ef6752"
+  }
+}

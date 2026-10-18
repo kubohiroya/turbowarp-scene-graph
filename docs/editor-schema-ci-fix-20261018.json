@@ -79,7 +79,7 @@
   ],
   "verification": {
     "full_check_passed": true,
-    "full_check_tests": 10,
+    "full_check_tests": 66,
     "logs_sha256": {
       "scene-graph-check.log": "35fcec3e680a426057b88e39739d2479adc5bb199e2fb3fc07e766a6e4dc51e7"
     },
@@ -97,5 +97,14 @@
     "stage2_or_later": false,
     "PR_merge": false,
     "npm_publish": false
+  },
+  "count_correction": {
+    "observed_at_utc": "2026-10-18T07:53:03.912220+00:00",
+    "previous_full_check_tests": 10,
+    "correct_full_check_tests": 66,
+    "correct_owner_total": 1106,
+    "basis": "same referenced scene-graph-check.log reports66 passed in5files; independent rerun also66",
+    "historical_snapshot": "history/stage1-counts-before-20261018/snapshot.json",
+    "scope": "documentation only; old targeted10-case subset records are retained"
   }
 }
