@@ -1,6 +1,6 @@
 {
   "name": "@kubohiroya/turbowarp-scene-graph",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Scene graph planning primitives for TurboWarp 3D extensions: YAML documents, validation, normalization, and deterministic call plans.",
   "author": "Hiroya Kubo <hiroya@cuc.ac.jp>",
   "license": "MPL-2.0",
@@ -71,8 +71,14 @@
     "yaml"
   ],
   "dependencies": {
-    "@kubohiroya/turbowarp-ar": "0.3.0",
+    "@kubohiroya/turbowarp-ar": "0.4.1",
     "yaml": "^2.9.0",
-    "@kubohiroya/turbowarp-extension-data-editor": "git+https://github.com/kubohiroya/turbowarp-extension-data-editor.git#76fa1d50a3c188082ceef723ea018a9d8769ea6e"
+    "@kubohiroya/turbowarp-extension-data-editor": "0.2.1"
+  },
+  "gitHead": "1094f2885ede04d87c384ba73296c8dfd35c5546",
+  "x-turbowarp-source": {
+    "revision": "1094f2885ede04d87c384ba73296c8dfd35c5546",
+    "revisionRole": "base-commit",
+    "sourceState": "local-release-overlay"
   }
 }
