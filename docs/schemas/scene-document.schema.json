@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/kubohiroya/turbowarp-scene-graph/main/schemas/scene-document.schema.json",
+  "title": "TurboWarp Scene Graph Document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "root"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": 1
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "root": {
+      "$ref": "scene-node.schema.json"
+    }
+  }
+}
