@@ -9,15 +9,15 @@ importers:
   .:
     dependencies:
       '@kubohiroya/turbowarp-ar':
-        specifier: 0.4.1
-        version: 0.4.1(react@18.3.1)
-      '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: 0.2.1
-        version: 0.2.1(react@18.3.1)
+        specifier: 0.4.2
+        version: 0.4.2
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
     devDependencies:
+      '@kubohiroya/turbowarp-extension-data-editor':
+        specifier: 0.2.1
+        version: 0.2.1(react@18.3.1)
       '@types/node':
         specifier: ^26.6.2
         version: 26.6.2
@@ -36,8 +36,8 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@kubohiroya/turbowarp-ar@0.4.1':
-    resolution: {integrity: sha512-U9frTOeuUgU4Q/Iy2PzJ5K/FuRt3+Mkie9FlJMYg0/hMEhpbL97Kq8NHoIUFj8DjTxVtvHH5+rPG2lBhmzFIYA==}
+  '@kubohiroya/turbowarp-ar@0.4.2':
+    resolution: {integrity: sha512-8Hij9M2u7+HuWAhyhIpzhuSpmk00Tr9nju3JALbNx0wA2ns4Wafm4bTEn7DRBc+Qf5mFfhRnpSCxZXDfx0QKpA==}
     engines: {node: '>=22.18.0'}
 
   '@kubohiroya/turbowarp-extension-data-editor@0.2.1':
@@ -590,12 +590,7 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@kubohiroya/turbowarp-ar@0.4.1(react@18.3.1)':
-    dependencies:
-      '@kubohiroya/turbowarp-extension-data-editor': 0.2.1(react@18.3.1)
-    transitivePeerDependencies:
-      - react
-      - react-dom
+  '@kubohiroya/turbowarp-ar@0.4.2': {}
 
   '@kubohiroya/turbowarp-extension-data-editor@0.2.1(react@18.3.1)':
     dependencies:

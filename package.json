@@ -60,7 +60,8 @@
     "@types/node": "^26.6.2",
     "ajv": "^8.20.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "@kubohiroya/turbowarp-extension-data-editor": "0.2.1"
   },
   "keywords": [
     "turbowarp",
@@ -71,9 +72,8 @@
     "yaml"
   ],
   "dependencies": {
-    "@kubohiroya/turbowarp-ar": "0.4.1",
-    "yaml": "^2.9.0",
-    "@kubohiroya/turbowarp-extension-data-editor": "0.2.1"
+    "@kubohiroya/turbowarp-ar": "0.4.2",
+    "yaml": "^2.9.0"
   },
   "gitHead": "1094f2885ede04d87c384ba73296c8dfd35c5546",
   "x-turbowarp-source": {
