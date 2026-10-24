@@ -1,4 +1,4 @@
 minimumReleaseAgeExclude:
 
-  - '@kubohiroya/turbowarp-ar@0.4.1'
+  - '@kubohiroya/turbowarp-ar@0.4.2'
   - '@kubohiroya/turbowarp-extension-data-editor@0.2.1'
