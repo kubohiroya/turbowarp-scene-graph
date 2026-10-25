@@ -1,6 +1,6 @@
 # turbowarp-scene-graph
 
-[日本語](README.ja.md)
+English | [日本語](README.ja.md)
 
 `@kubohiroya/turbowarp-scene-graph` turns small scene graph documents into deterministic TurboWarp
 extension call plans. It reads and writes them as YAML, validates and normalizes them, and expands
