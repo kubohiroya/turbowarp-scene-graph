@@ -1,6 +1,6 @@
 # turbowarp-scene-graph
 
-[English](README.md)
+[English](README.md) | 日本語
 
 `@kubohiroya/turbowarp-scene-graph` は、小さな scene graph document を決定的な TurboWarp 拡張の呼び出し計画へ変換します。YAML での読み書き、検証と正規化、そして Kamishibai scene が持つ `scene3d` / `ar` 断片を2つの拡張の起動呼び出しへ展開するところまでを担当します。
 
