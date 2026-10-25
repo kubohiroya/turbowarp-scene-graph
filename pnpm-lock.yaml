@@ -9,15 +9,15 @@ importers:
   .:
     dependencies:
       '@kubohiroya/turbowarp-ar':
-        specifier: "^0.4.2"
+        specifier: ^0.4.2
         version: 0.4.2
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
     devDependencies:
       '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: "^0.2.1"
-        version: 0.2.1(react@18.3.1)
+        specifier: ^0.3.3
+        version: 0.3.3(react@18.3.1)
       '@types/node':
         specifier: ^26.6.2
         version: 26.6.2
@@ -40,8 +40,8 @@ packages:
     resolution: {integrity: sha512-8Hij9M2u7+HuWAhyhIpzhuSpmk00Tr9nju3JALbNx0wA2ns4Wafm4bTEn7DRBc+Qf5mFfhRnpSCxZXDfx0QKpA==}
     engines: {node: '>=22.18.0'}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.2.1':
-    resolution: {integrity: sha512-XFI4n7FLVDsdqRidfHpw1Ka2OjPKlK7JrM6S+22KSK8ECIxLLUsa6xkwmlkrAQZw5s8et75eghO4rEkrHisMHw==}
+  '@kubohiroya/turbowarp-extension-data-editor@0.3.3':
+    resolution: {integrity: sha512-2HFt8Pi9xe2FkhM2IbIxO8PYESBVKmpZZJT/omgl94y8MCqApP15RkGwNq5OPM2JyE/wQi624hrzeZu6eJIreA==}
     engines: {node: '>=22'}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
@@ -592,7 +592,7 @@ snapshots:
 
   '@kubohiroya/turbowarp-ar@0.4.2': {}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.2.1(react@18.3.1)':
+  '@kubohiroya/turbowarp-extension-data-editor@0.3.3(react@18.3.1)':
     dependencies:
       '@rjsf/core': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))(react@18.3.1)
       '@rjsf/utils': 5.24.13(react@18.3.1)
