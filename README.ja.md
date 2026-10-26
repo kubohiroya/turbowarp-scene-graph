@@ -94,6 +94,7 @@ const calls = createTurboWarpExtensionPlan({
 共通data-editorはSchemaBundle等の型参照とSchema契約テスト用の開発依存です。`./editor-schema`の実行JSはSchemaとpure owner検証だけを公開し、data-editorやAjvのインストールを要求しません。公開型を利用するTypeScript consumerはdata-editorを自身の開発依存に追加してください。上流ARも編集用engineをproduction依存に含めない版を利用します。
 
 ```bash
+npm install --global corepack@latest
 corepack enable
 pnpm install --frozen-lockfile
 pnpm run check
