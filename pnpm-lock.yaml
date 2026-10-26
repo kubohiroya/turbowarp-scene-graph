@@ -9,15 +9,15 @@ importers:
   .:
     dependencies:
       '@kubohiroya/turbowarp-ar':
-        specifier: ^0.4.2
-        version: 0.4.2
+        specifier: ^0.5.0
+        version: 0.5.0
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
     devDependencies:
       '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: ^0.3.3
-        version: 0.3.3(react@18.3.1)
+        specifier: ^0.3.4
+        version: 0.3.4(react@18.3.1)
       '@types/node':
         specifier: ^26.6.2
         version: 26.6.2
@@ -36,12 +36,12 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@kubohiroya/turbowarp-ar@0.4.2':
-    resolution: {integrity: sha512-8Hij9M2u7+HuWAhyhIpzhuSpmk00Tr9nju3JALbNx0wA2ns4Wafm4bTEn7DRBc+Qf5mFfhRnpSCxZXDfx0QKpA==}
+  '@kubohiroya/turbowarp-ar@0.5.0':
+    resolution: {integrity: sha512-P3RUaoCFdgQe4Yynx/CeDPNeMGvy+H59WDpZ7lhjOR/F0kOCyWZbI2S+rbgignv5gTwxBTEy94nRB9qJKx27iQ==}
     engines: {node: '>=22.18.0'}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.3.3':
-    resolution: {integrity: sha512-2HFt8Pi9xe2FkhM2IbIxO8PYESBVKmpZZJT/omgl94y8MCqApP15RkGwNq5OPM2JyE/wQi624hrzeZu6eJIreA==}
+  '@kubohiroya/turbowarp-extension-data-editor@0.3.4':
+    resolution: {integrity: sha512-/hvZCzqqFiu3r54wmo5yYezRTEbchsCAIJjjREJH3aZzxKQ+4YoRDSjFiW8MX49usc05bfxogp/WtpFyeut2RA==}
     engines: {node: '>=22'}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
@@ -264,6 +264,9 @@ packages:
 
   fast-uri@3.1.8:
     resolution: {integrity: sha512-GZMtZUTNRpOVIECoXwLNZS5xUGE+mVNbTB8h/7Rwh2TFWcBQiPzTgyZi05BF9UMZKkLJv8XBRJTlU7zg8+ZfMg==}
+
+  fast-uri@3.1.9:
+    resolution: {integrity: sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ==}
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -590,16 +593,16 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@kubohiroya/turbowarp-ar@0.4.2': {}
+  '@kubohiroya/turbowarp-ar@0.5.0': {}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.3.3(react@18.3.1)':
+  '@kubohiroya/turbowarp-extension-data-editor@0.3.4(react@18.3.1)':
     dependencies:
       '@rjsf/core': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))(react@18.3.1)
       '@rjsf/utils': 5.24.13(react@18.3.1)
       '@rjsf/validator-ajv8': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))
       ajv: 8.20.0
       ajv-formats: 2.1.1(ajv@8.20.0)
-      fast-uri: 3.1.8
+      fast-uri: 3.1.9
       yaml: 2.9.1
     optionalDependencies:
       react: 18.3.1
@@ -778,6 +781,8 @@ snapshots:
   fast-deep-equal@3.1.3: {}
 
   fast-uri@3.1.8: {}
+
+  fast-uri@3.1.9: {}
 
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:

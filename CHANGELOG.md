@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+- Follow TurboWarp-AR 0.5.0 and the shared data editor 0.3.4.
+- Rebuild the runtime and editor exports against the published dependencies.
+- Keep existing scene graph and YAML APIs unchanged.
+
 ## 0.2.0
 
 Absorbs `@kubohiroya/turbowarp-3d-scene-dsl`, which is retired. That package wrapped this one to
