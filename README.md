@@ -110,6 +110,7 @@ documents through both and fails if the two ever disagree.
 The shared data-editor is a development dependency for SchemaBundle types and schema contract tests. The `./editor-schema` JavaScript entry exports schemas and pure owner validation without requiring an installed data-editor or Ajv. TypeScript consumers of its public editor types should add data-editor as their own development dependency. The upstream AR package must also keep editor engines out of its production dependencies.
 
 ```bash
+npm install --global corepack@latest
 corepack enable
 pnpm install --frozen-lockfile
 pnpm run check
