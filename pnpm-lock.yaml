@@ -9,15 +9,15 @@ importers:
   .:
     dependencies:
       '@kubohiroya/turbowarp-ar':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.0
+        version: 0.6.0
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
     devDependencies:
       '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: ^0.3.4
-        version: 0.3.4(react@18.3.1)
+        specifier: ^0.4.0
+        version: 0.4.0(react@18.3.1)
       '@types/node':
         specifier: ^26.6.2
         version: 26.6.2
@@ -36,13 +36,13 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@kubohiroya/turbowarp-ar@0.5.0':
-    resolution: {integrity: sha512-P3RUaoCFdgQe4Yynx/CeDPNeMGvy+H59WDpZ7lhjOR/F0kOCyWZbI2S+rbgignv5gTwxBTEy94nRB9qJKx27iQ==}
-    engines: {node: '>=22.18.0'}
+  '@kubohiroya/turbowarp-ar@0.6.0':
+    resolution: {integrity: sha512-ci4tlaZgNazJKPM8IvoF2wsZcc4zG0Z3rBAbNo0X1OfVEZfmk9L5F2BgkZYUYISGrIWpM52h/3zFMe8uXqShnQ==}
+    engines: {node: '>=24'}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.3.4':
-    resolution: {integrity: sha512-/hvZCzqqFiu3r54wmo5yYezRTEbchsCAIJjjREJH3aZzxKQ+4YoRDSjFiW8MX49usc05bfxogp/WtpFyeut2RA==}
-    engines: {node: '>=22'}
+  '@kubohiroya/turbowarp-extension-data-editor@0.4.0':
+    resolution: {integrity: sha512-AijNYwf8LG+i0NLx48wYsKpObWRZ347BEtrsLv4PNIc20UItC4hs4yTwnGNd+ffGHIrSqcWUjt3ZJysFt/KzsQ==}
+    engines: {node: '>=24'}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
       react-dom: ^16.14.0 || ^17 || ^18
@@ -593,9 +593,9 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@kubohiroya/turbowarp-ar@0.5.0': {}
+  '@kubohiroya/turbowarp-ar@0.6.0': {}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.3.4(react@18.3.1)':
+  '@kubohiroya/turbowarp-extension-data-editor@0.4.0(react@18.3.1)':
     dependencies:
       '@rjsf/core': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))(react@18.3.1)
       '@rjsf/utils': 5.24.13(react@18.3.1)
