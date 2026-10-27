@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+- Follow TurboWarp-AR 0.6.0 and the shared data editor 0.4.0.
+- Keep the existing scene graph API unchanged.
+
 ## 0.3.0
 
 - Follow TurboWarp-AR 0.5.0 and the shared data editor 0.3.4.
