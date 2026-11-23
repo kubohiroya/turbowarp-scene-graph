@@ -9,15 +9,15 @@ importers:
   .:
     dependencies:
       '@kubohiroya/turbowarp-ar':
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.10.1
+        version: 0.10.1
       yaml:
         specifier: ^2.9.0
         version: 2.9.1
     devDependencies:
       '@kubohiroya/turbowarp-extension-data-editor':
-        specifier: ^0.11.2
-        version: 0.11.2(react@18.3.1)
+        specifier: ^0.11.4
+        version: 0.11.4(react@18.3.1)
       '@types/node':
         specifier: ^26.6.2
         version: 26.6.2
@@ -36,12 +36,12 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@kubohiroya/turbowarp-ar@0.10.0':
-    resolution: {integrity: sha512-uHQSybCm0AqK/YACQLCIa2N4XoobvBaANXzkh/inUPvDMiDN6dTN8u16M0TflKV5gM9Mjpz+NMTrwaNK5ORSDw==}
+  '@kubohiroya/turbowarp-ar@0.10.1':
+    resolution: {integrity: sha512-nIe9s9w04/I4eLBLf8pFXx0D8Fig3S9nbXEy3Oma+UmEeAKC1ZYDDsweoh5i8Cxnbwu78poLTlPDDm7c9IcaWw==}
     engines: {node: '>=24'}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.11.2':
-    resolution: {integrity: sha512-uTOZJSNVzvpJIMGyOUTaQt2LOXXf5kru8mUyRD2Y/rsYUNJoGM4S8dhEI5UeyDFaXR7rCRVzkFR5pAcqjmSycQ==}
+  '@kubohiroya/turbowarp-extension-data-editor@0.11.4':
+    resolution: {integrity: sha512-kERbN1zFSoSUPwuZBgW3Ia7R6KHZ3B5MwDDomtVtIOr5QtjHx3NYMmxGE++w46KlkMWZvHFnneND7siFeNLQFw==}
     engines: {node: '>=24'}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
@@ -601,9 +601,9 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@kubohiroya/turbowarp-ar@0.10.0': {}
+  '@kubohiroya/turbowarp-ar@0.10.1': {}
 
-  '@kubohiroya/turbowarp-extension-data-editor@0.11.2(react@18.3.1)':
+  '@kubohiroya/turbowarp-extension-data-editor@0.11.4(react@18.3.1)':
     dependencies:
       '@rjsf/core': 5.24.13(@rjsf/utils@5.24.13(react@18.3.1))(react@18.3.1)
       '@rjsf/utils': 5.24.13(react@18.3.1)
